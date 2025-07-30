@@ -9,18 +9,6 @@ packages:
   # System packages
   gcc:
     externals:
-    - spec: gcc@7.5.0 languages:='c,c++,fortran'
-      prefix: /usr
-      extra_attributes:
-        compilers:
-          c: /usr/bin/gcc
-          cxx: /usr/bin/g++
-          fortran: /usr/bin/gfortran
-        flags: {}
-        environment:
-          append_path:
-            PKG_CONFIG_PATH: /usr/lib64/pkgconfig
-        extra_rpaths: []
     - spec: gcc@12.3.0 languages:='c,c++,fortran'
       prefix: /usr
       extra_attributes:
