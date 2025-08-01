@@ -155,13 +155,15 @@ packages:
       modules:
       - cray-python/3.11.7
       prefix: /opt/cray/pe/python/3.11.7/
-  py-pip:
-    # buildable: false
-    externals:
-    - spec: py-pip@23.2.1-cray ^python@3.11.7-cray
-      modules:
-      - cray-python/3.11.7
-      prefix: /opt/cray/pe/python/3.11.7/
+  # py-pip disabled because it causes incompatible versions between
+  # py-setuptools and py-packaging.
+  # py-pip:
+  #   # buildable: false
+  #   externals:
+  #   - spec: py-pip@23.2.1-cray ^python@3.11.7-cray
+  #     modules:
+  #     - cray-python/3.11.7
+  #     prefix: /opt/cray/pe/python/3.11.7/
   py-pluggy:
     # buildable: false
     externals:
