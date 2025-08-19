@@ -7,15 +7,38 @@ packages:
       gl:: [osmesa]
 
   # System packages
+  gcc:
+    externals:
+    - spec: gcc@12.3.0 languages:='c,c++,fortran'
+      prefix: /usr
+      extra_attributes:
+        compilers:
+          c: /usr/bin/gcc-12
+          cxx: /usr/bin/g++-12
+          fortran: /usr/bin/gfortran-12
+    - spec: gcc@13.3.1 languages:='c,c++,fortran'
+      prefix: /usr
+      extra_attributes:
+        compilers:
+          c: /usr/bin/gcc-13
+          cxx: /usr/bin/g++-13
+          fortran: /usr/bin/gfortran-13
+    - spec: gcc@14.2.0 languages:='c,c++,fortran'
+      prefix: /usr
+      extra_attributes:
+        compilers:
+          c: /usr/bin/gcc-14
+          cxx: /usr/bin/g++-14
+          fortran: /usr/bin/gfortran-14
   openssh:
     buildable: false
     externals:
-    - spec: "openssh@8.4p1"
+    - spec: openssh@8.4p1
       prefix: /usr
   openssl:
     buildable: false
     externals:
-    - spec: "openssl@1.1.1l"
+    - spec: openssl@1.1.1l
       prefix: /usr
 
   cmake:
@@ -25,37 +48,41 @@ packages:
   cray-libsci:
     buildable: false
     externals:
-    - spec: cray-libsci@22.12.1.1 +openmp+mpi
-      modules: [cray-libsci/22.12.1.1]
+    - spec: cray-libsci@24.11.0 +openmp+mpi
+      modules: [cray-libsci/24.11.0]
   cray-mpich:
     buildable: false
     externals:
-    - spec: cray-mpich@8.1.23 %gcc
-      prefix: /opt/cray/pe/mpich/8.1.23/ofi/gnu/9.1
+    - spec: cray-mpich@8.1.31
       modules:
-      - cray-mpich/8.1.23
-      - libfabric/1.15.2.0
-    - spec: cray-mpich@8.1.23 %cce
-      prefix: /opt/cray/pe/mpich/8.1.23/ofi/crayclang/10.0
-      modules:
-      - cray-mpich/8.1.23
-      - libfabric/1.15.2.0
-    - spec: cray-mpich@8.1.17 %clang@15.0.0-rocm5.3.0
-      prefix: /opt/cray/pe/mpich/8.1.23/ofi/amd/5.0
-      modules:
-      - cray-mpich/8.1.23
-      - libfabric/1.15.2.0
-    - spec: cray-mpich@8.1.17 %clang@15.0.0-rocm5.4.3
-      prefix: /opt/cray/pe/mpich/8.1.23/ofi/amd/5.0
-      modules:
-      - cray-mpich/8.1.23
-      - libfabric/1.15.2.0
+      - cray-mpich/8.1.31
+      - libfabric/1.22.0
+    # - spec: cray-mpich@8.1.23 %gcc
+    #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/gnu/9.1
+    #   modules:
+    #   - cray-mpich/8.1.23
+    #   - libfabric/1.22.0
+    # - spec: cray-mpich@8.1.23 %cce
+    #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/crayclang/10.0
+    #   modules:
+    #   - cray-mpich/8.1.23
+    #   - libfabric/1.22.0
+    # - spec: cray-mpich@8.1.17 %clang@15.0.0-rocm5.3.0
+    #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/amd/5.0
+    #   modules:
+    #   - cray-mpich/8.1.23
+    #   - libfabric/1.22.0
+    # - spec: cray-mpich@8.1.17 %clang@15.0.0-rocm5.4.3
+    #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/amd/5.0
+    #   modules:
+    #   - cray-mpich/8.1.23
+    #   - libfabric/1.22.0
   libfabric:
     buildable: false
     externals:
-    - spec: libfabric@1.15.2.0
+    - spec: libfabric@1.22.0
       modules:
-      - libfabric/1.15.2.0
+      - libfabric/1.22.0
   # libffi:
   #   # py-cffi requires libffi.so.8 which is not on this system
   #   buildable: false
