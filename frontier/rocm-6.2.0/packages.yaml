@@ -146,9 +146,9 @@ packages:
           c: /opt/rocm-6.2.0/llvm/bin/clang++
           c++: /opt/rocm-6.2.0/llvm/bin/clang++
           hip: /opt/rocm-6.2.0/hip/bin/hipcc
-      environment:
-        set:
-          MPICH_GPU_SUPPORT_ENABLED: 1 
+        environment:
+          set:
+            MPICH_GPU_SUPPORT_ENABLED: 1 
   llvm-amdgpu:
     buildable: false
     externals:
