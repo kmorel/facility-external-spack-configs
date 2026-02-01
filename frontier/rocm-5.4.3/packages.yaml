@@ -148,7 +148,7 @@ packages:
           hip: /opt/rocm-5.4.3/hip/bin/hipcc
         environment:
           set:
-            MPICH_GPU_SUPPORT_ENABLED: 1 
+            MPICH_GPU_SUPPORT_ENABLED: "1"
     - spec: hip@5.4.3 %cce
       prefix: /opt/rocm-5.4.3
       modules:
@@ -161,7 +161,7 @@ packages:
           hip: /opt/rocm-5.4.3/hip/bin/hipcc
         environment:
           set:
-            MPICH_GPU_SUPPORT_ENABLED: 1 
+            MPICH_GPU_SUPPORT_ENABLED: "1"
     - spec: hip@5.4.3 %clang@15.0.0-rocm5.4.3
       prefix: /opt/rocm-5.4.3
       modules:
@@ -174,7 +174,7 @@ packages:
           hip: /opt/rocm-5.4.3/hip/bin/hipcc
         environment:
           set:
-            MPICH_GPU_SUPPORT_ENABLED: 1 
+            MPICH_GPU_SUPPORT_ENABLED: "1"
   llvm-amdgpu:
     buildable: false
     externals:

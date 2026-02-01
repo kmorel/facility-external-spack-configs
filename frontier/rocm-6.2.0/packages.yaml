@@ -148,7 +148,7 @@ packages:
           hip: /opt/rocm-6.2.0/hip/bin/hipcc
         environment:
           set:
-            MPICH_GPU_SUPPORT_ENABLED: 1 
+            MPICH_GPU_SUPPORT_ENABLED: "1"
   llvm-amdgpu:
     buildable: false
     externals:
