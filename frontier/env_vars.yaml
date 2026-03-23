@@ -1,0 +1,6 @@
+env_vars:
+  set:
+    MPICH_GPU_SUPPORT_ENABLED: "1"
+    CFLAGS: -I/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/include -L/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/lib -lmpi -L/opt/cray/pe/mpich/8.1.31/gtl/lib -lmpi_gtl_hsa
+    CXXFLAGS: -I/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/include -L/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/lib -lmpi -L/opt/cray/pe/mpich/8.1.31/gtl/lib -lmpi_gtl_hsa
+    HIPFLAGS: -I/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/include -L/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/lib -lmpi -L/opt/cray/pe/mpich/8.1.31/gtl/lib -lmpi_gtl_hsa
