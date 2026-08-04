@@ -33,8 +33,8 @@ packages:
         - cray-libsci/25.09.0
         - craype-x86-trento
         - cray-pmi/6.1.16
-        - libfabric/1.20.1
-        - xpmem/2.10.6-1.2_gfaa90a94be64
+        - libfabric/2.3.1
+        - xpmem/1.0.1-1.5_1_gfb6998056825
       extra_attributes:
         compilers:
           c: /usr/bin/gcc-14
@@ -66,33 +66,33 @@ packages:
     - spec: cray-mpich@8.1.31
       modules:
       - cray-mpich/8.1.31
-      - libfabric/1.20.1
+      - libfabric/2.3.1
     # - spec: cray-mpich@8.1.23 %gcc
     #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/gnu/9.1
     #   modules:
     #   - cray-mpich/8.1.23
-    #   - libfabric/1.20.1
+    #   - libfabric/2.3.1
     # - spec: cray-mpich@8.1.23 %cce
     #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/crayclang/10.0
     #   modules:
     #   - cray-mpich/8.1.23
-    #   - libfabric/1.20.1
+    #   - libfabric/2.3.1
     # - spec: cray-mpich@8.1.17 %clang@15.0.0-rocm5.3.0
     #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/amd/5.0
     #   modules:
     #   - cray-mpich/8.1.23
-    #   - libfabric/1.20.1
+    #   - libfabric/2.3.1
     # - spec: cray-mpich@8.1.17 %clang@15.0.0-rocm5.4.3
     #   prefix: /opt/cray/pe/mpich/8.1.23/ofi/amd/5.0
     #   modules:
     #   - cray-mpich/8.1.23
-    #   - libfabric/1.20.1
+    #   - libfabric/2.3.1
   libfabric:
     buildable: false
     externals:
     - spec: libfabric@1.20.1
       modules:
-      - libfabric/1.20.1
+      - libfabric/2.3.1
   # libffi:
   #   # py-cffi requires libffi.so.8 which is not on this system
   #   buildable: false
